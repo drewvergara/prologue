@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import Image from "next/image";
 import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { Play, Pause, RotateCcw } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,7 +17,7 @@ interface CirclePosition {
 }
 
 const CircularTimer: React.FC = () => {
-  const CIRCLE_SIZE = 8;
+  const CIRCLE_SIZE = 6;
   const RADIUS = 96;
   const PADDING = CIRCLE_SIZE * 2;
   const SIZE = (RADIUS + PADDING) * 2;
@@ -179,15 +180,15 @@ const CircularTimer: React.FC = () => {
 
   return (
     <div 
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-cover bg-center"
+      className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-cover bg-center"
       style={{
         fontFamily: '"Noto Sans Mono", monospace'
       }}
     >      
       {/* Glass effect container */}
-      <Card className="backdrop-blur-md bg-white/10 border-white/20 rounded-none shadow-2xl relative z-10">
+      <Card className="my-8 backdrop-blur-md bg-white/10 border-white/20 rounded-none shadow-2xl relative z-10">
         <CardContent className="p-8 flex flex-col items-center space-y-6">
-          <div className="w-48 h-48 relative">
+          <div className="w-72 h-72 relative">
             <svg className="w-full h-full transform" viewBox={`0 0 ${SIZE} ${SIZE}`}>
               {circles}
             </svg>
@@ -220,6 +221,19 @@ const CircularTimer: React.FC = () => {
           </div>
         </CardContent>
       </Card>
+      <a
+        href="https://www.offekt.com"
+        target="_blank"      
+      >
+      <Image
+          className="dark:invert"
+          src="/offekt_logo_20250117@2x.png"
+          alt="OFFEKT logo"
+          width={88}
+          height={27}
+          priority
+        />      
+        </a>      
     </div>
   );
 };

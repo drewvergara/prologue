@@ -44,7 +44,7 @@ export default function Home() {
               <animate
                 attributeName="seed"
                 values="1;2;3;4;5;6;7;8;9;10"
-                dur="1s"
+                dur="0.5s"
                 repeatCount="indefinite"
               />
             </feTurbulence>
@@ -65,7 +65,7 @@ export default function Home() {
           style={{ mixBlendMode: 'overlay' }}
         />
       </svg>      
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+      <main className="flex gap-8 row-start-2 items-center sm:items-start">
         <CircularTimer />
       </main>
     </div>
