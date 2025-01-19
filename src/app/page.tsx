@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CircularTimer from "@/components/circular-timer";
 
 export default function Home() {
