@@ -116,18 +116,18 @@ const CircularTimer: React.FC = () => {
   }, [isRunning, timeLeft]);
 
   const getCircleColor = useCallback((circle: CirclePosition, currentTime: number): string => {
-    if (!hasStarted) return "rgb(255, 255, 255)";
+    if (!hasStarted) return "rgb(54, 54, 54)";
     
     if (circle.ring === 0) {
-      return currentTime === 0 ? "#1e1e1e" : "rgb(255, 255, 255)";
+      return currentTime === 0 ? "rgb(255, 255, 255)" : "rgb(54, 54, 54)";
     }
 
-    if (currentTime <= 1) return "#1e1e1e";
+    if (currentTime <= 1) return "rgb(255, 255, 255)";
 
     const percentage = (currentTime - 1) / 59;
     const activeCircleCount = Math.ceil(percentage * totalCircles);
     
-    return circle.sequenceIndex > (totalCircles - activeCircleCount) ? "#1e1e1e" : "rgb(255, 255, 255)";
+    return circle.sequenceIndex > (totalCircles - activeCircleCount) ? "rgb(255, 255, 255)"  : "rgb(54, 54, 54)";
   }, [hasStarted, totalCircles]);
 
   const reset = useCallback(() => {
