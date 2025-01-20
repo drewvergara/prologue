@@ -1,3 +1,13 @@
+![hero](image.png)
+
+
+<p align="center">
+	<h1 align="center"><b>Prologue</b></h1>
+<p align="center">
+    A minimalistic circular countdown timer.
+  </p>
+</p>
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
