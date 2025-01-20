@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 import Image from "next/image";
 import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
-import { Play, Pause, RotateCcw } from 'lucide-react';
+import { Pause, RotateCcw } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
